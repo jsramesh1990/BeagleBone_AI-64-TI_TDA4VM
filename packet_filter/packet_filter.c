@@ -148,7 +148,7 @@ static u8 pf_decide_action(struct sk_buff *skb, struct pf_rule *rule)
     return PF_ACTION_PASS;
 }
 
-/* ==================== NETDEVICE OPS ==================== */
+/* ==================== NET-DEVICE OPS ==================== */
 
 static int pf_netdev_open(struct net_device *dev)
 {
