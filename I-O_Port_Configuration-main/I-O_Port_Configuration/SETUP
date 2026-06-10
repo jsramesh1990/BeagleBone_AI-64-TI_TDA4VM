@@ -1,0 +1,74 @@
+KEIL µVISION PROJECT SETUP
+1. Create New Project:
+Open Keil µVision5
+
+Project → New µVision Project
+
+Select AT89S52 from device database
+
+Create project folder structure
+
+2. Configuration Settings:
+c
+// Target Options Configuration:
+- Device: AT89S52
+- Xtal (MHz): 11.0592
+- Use On-chip ROM (0x0-0xFFF)
+- Memory Model: Small
+- Code Rom Size: Large
+- Operating System: None
+3. Build Configuration:
+bash
+# Build Process:
+1. Add source files to project
+2. Set include paths
+3. Configure output for HEX file generation
+4. Build target (F7)
+5. Verify no errors/warnings
+FLASH MAGIC PROGRAMMING STEPS
+1. Hardware Connection:
+text
+8051 Board → USB to UART Converter
+P3.0 (RX)  → TX of USB-UART
+P3.1 (TX)  → RX of USB-UART
+VCC (5V)   → 5V
+GND        → GND
+2. Programming Procedure:
+Connect hardware as per circuit diagram
+
+Open Flash Magic software
+
+Select correct COM port
+
+Choose device: AT89S52
+
+Set interface: ISP
+
+Load HEX file from Keil output
+
+Click "Start" to program
+
+Verify successful programming
+
+CIRCUIT DIAGRAM (Proteus)
+Components List:
+text
+Microcontroller: AT89S52
+Crystal: 11.0592 MHz
+Capacitors: 2x 33pF, 10µF electrolytic
+Resistors: 8x 330Ω, 4x 10kΩ
+LEDs: 8x (Red/Green)
+Buttons: 4x tactile switches
+Power: 5V DC supply
+Connectors: USB to UART interface
+Schematic Connections:
+text
+P1.0-P1.7 → LEDs through 330Ω resistors
+P0.0-P0.3 → Buttons with pull-up resistors (10kΩ)
+P3.0 → RX of USB-UART
+P3.1 → TX of USB-UART
+XTAL1 → 11.0592 MHz crystal
+XTAL2 → Crystal with capacitors
+RESET → 10kΩ pull-up with 10µF capacitor
+VCC → 5V
+GND → Ground
