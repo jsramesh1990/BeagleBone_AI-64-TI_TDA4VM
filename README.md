@@ -645,11 +645,6 @@ CMD ["modprobe", "packet_filter"]
 2. **Linux Socket Programming** - Sean Walton
 3. **Network Programming with Go** - Adam Woodbeck
 
-### **Online Resources**
-- [Linux Kernel Source](https://elixir.bootlin.com/linux/latest/source)
-- [Kernel Documentation](https://www.kernel.org/doc/html/latest/)
-- [Linux Weekly News](https://lwn.net/Kernel/)
-
 ---
 
 ##  **Contributing**
@@ -701,10 +696,6 @@ git push origin feature/new-rule-type
 ---
 
 ##  **Getting Help**
-
-### **Support**
-
-- **Email**: js.ramesh1990@gmail.com
 
 ### **Before Asking for Help**
 1. Check this README and documentation
