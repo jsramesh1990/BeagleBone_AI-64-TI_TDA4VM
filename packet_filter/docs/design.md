@@ -14,30 +14,9 @@ The Packet Filter Driver is a Linux kernel module that provides:
 ### 2.1 High-Level Architecture
 
 ### 2.1 High-Level Architecture
-┌─────────────────────────────────────────┐
-│ Userspace Applications                 │
-│ (filter_ctl, filter_stats, etc.)       │
-└───────────────────┬─────────────────────┘
-                    │ (ioctl, sysfs, debugfs)
-┌───────────────────┴─────────────────────┐
-│ Kernel Module                           │
-│ ┌─────────────────────────────────┐     │
-│ │ Packet Filter Engine            │     │
-│ │ • Rule Matching                 │     │
-│ │ • Packet Processing             │     │
-│ │ • Statistics Collection         │     │
-│ └───────────────┬─────────────────┘     │
-│                 │                        │
-│ ┌───────────────┴─────────────────┐     │
-│ │ Network Interface               │     │
-│ │ • Virtual Device (pfX)          │     │
-│ │ • Hook into network stack       │     │
-│ └─────────────────────────────────┘     │
-└───────────────────┬─────────────────────┘
-                    │
-┌───────────────────┴─────────────────────┐
-│ Physical Network Device                 │
-└─────────────────────────────────────────┘
+(Best) Use a Mermaid diagram – rendered natively by GitHub, GitLab, Obsidian, etc.
+
+Just copy this into your .md file inside a ```mermaid block. It scales, stays aligned, and looks professional.
 
 text
 
