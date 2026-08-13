@@ -15,28 +15,28 @@ The Packet Filter Driver is a Linux kernel module that provides:
 
 ### 2.1 High-Level Architecture
 ┌─────────────────────────────────────────┐
-│ Userspace Applications │
-│ (filter_ctl, filter_stats, etc.) │
+│ Userspace Applications                 │
+│ (filter_ctl, filter_stats, etc.)       │
 └───────────────────┬─────────────────────┘
-│ (ioctl, sysfs, debugfs)
+                    │ (ioctl, sysfs, debugfs)
 ┌───────────────────┴─────────────────────┐
-│ Kernel Module │
-│ ┌─────────────────────────────────┐ │
-│ │ Packet Filter Engine │ │
-│ │ • Rule Matching │ │
-│ │ • Packet Processing │ │
-│ │ • Statistics Collection │ │
-│ └───────────────┬─────────────────┘ │
-│ │ │
-│ ┌───────────────┴─────────────────┐ │
-│ │ Network Interface │ │
-│ │ • Virtual Device (pfX) │ │
-│ │ • Hook into network stack │ │
-│ └─────────────────────────────────┘ │
+│ Kernel Module                           │
+│ ┌─────────────────────────────────┐     │
+│ │ Packet Filter Engine            │     │
+│ │ • Rule Matching                 │     │
+│ │ • Packet Processing             │     │
+│ │ • Statistics Collection         │     │
+│ └───────────────┬─────────────────┘     │
+│                 │                        │
+│ ┌───────────────┴─────────────────┐     │
+│ │ Network Interface               │     │
+│ │ • Virtual Device (pfX)          │     │
+│ │ • Hook into network stack       │     │
+│ └─────────────────────────────────┘     │
 └───────────────────┬─────────────────────┘
-│
+                    │
 ┌───────────────────┴─────────────────────┐
-│ Physical Network Device │
+│ Physical Network Device                 │
 └─────────────────────────────────────────┘
 
 text
