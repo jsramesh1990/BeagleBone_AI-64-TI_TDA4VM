@@ -1,0 +1,42 @@
+8051-IO-Port-Configuration/
+├── docs/
+│   ├── Project_Overview.md
+│   ├── Hardware_Setup.md
+│   ├── Theory_Explanation.md
+│   └── Troubleshooting.md
+├── src/
+│   ├── main.c
+│   ├── bitwise_operations.h
+│   ├── io_config.h
+│   ├── delay.h
+│   └── patterns/
+│       ├── led_patterns.c
+│       ├── button_input.c
+│       └── serial_communication.c
+├── keil_project/
+│   ├── 8051_IO_Config.uvproj
+│   ├── startup.a51
+│   ├── Target_1/
+│   │   ├── Objects/
+│   │   └── Listings/
+│   └── Settings/
+├── hex_files/
+│   ├── basic_io_config.hex
+│   ├── led_pattern.hex
+│   └── button_led.hex
+├── simulation/
+│   ├── proteus/
+│   │   ├── circuit_design.DSN
+│   │   └── simulation.pdsprj
+│   └── waveforms/
+│       ├── timing_diagrams.pdf
+│       └── port_monitoring.txt
+├── test_results/
+│   ├── test_cases.txt
+│   ├── oscilloscope_readings/
+│   └── verification_logs/
+├── tools/
+│   ├── hex_to_bin_converter.c
+│   ├── baud_rate_calculator.py
+│   └── delay_calculator.html
+└── README.md
