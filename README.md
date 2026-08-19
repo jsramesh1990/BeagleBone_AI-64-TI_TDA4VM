@@ -15,6 +15,18 @@
 
 ---
 
+## Complete BeagleBone AI-64 System Flow
+
+The following animation illustrates the complete BeagleBone AI-64 based on the TI TDA4VM execution flow, from power-on and boot stages through the Linux kernel, Device Tree, drivers, middleware, AI acceleration, application processing, and hardware peripherals.
+
+<p align="center">
+  <img src="images/beaglebone_ai64_tda4vm_flow_animation.gif"
+       alt="BeagleBone AI-64 TI TDA4VM Complete System Flow"
+       width="950">
+</p>
+
+---
+
 # Table of Contents
 
 1. [Project Overview](#1-project-overview)
