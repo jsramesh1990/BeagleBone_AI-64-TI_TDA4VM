@@ -1,0 +1,15 @@
+[Unit]
+Description=Packet Filter Kernel Driver
+After=systemd-modules-load.service
+Before=network-pre.target
+
+Wants=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/sbin/modprobe packet_filter
+ExecStop=/sbin/rmmod packet_filter
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,103 @@
+BeagleBone_AI-64–TI_TDA4VM/
+│
+├── README.md
+├── LICENSE
+├── Makefile
+├── Kconfig
+├── .gitignore
+│
+├── kernel/
+│   └── packet_filter/
+│       ├── packet_filter.c
+│       ├── packet_filter.h
+│       ├── ioctl_defs.h
+│       ├── rule_engine.c
+│       ├── rule_engine.h
+│       ├── packet_parser.c
+│       ├── packet_parser.h
+│       ├── statistics.c
+│       ├── statistics.h
+│       ├── logging.c
+│       ├── logging.h
+│       └── Makefile
+│
+├── userspace/
+│   ├── Makefile
+│   ├── include/
+│   │   └── libfilter.h
+│   │
+│   ├── lib/
+│   │   └── libfilter.c
+│   │
+│   ├── tools/
+│   │   ├── filter_ctl.c
+│   │   ├── filter_stats.c
+│   │   ├── filter_test.c
+│   │   └── benchmark.c
+│   │
+│   └── config/
+│       └── default_rules.conf
+│
+├── scripts/
+│   ├── build.sh
+│   ├── clean.sh
+│   ├── load_driver.sh
+│   ├── unload_driver.sh
+│   ├── configure.sh
+│   ├── test_suite.sh
+│   ├── perf_test.sh
+│   ├── stress_test.sh
+│   └── install.sh
+│
+├── tests/
+│   ├── unit/
+│   │   ├── test_rule_engine.c
+│   │   └── test_packet_parser.c
+│   │
+│   ├── integration/
+│   │   ├── test_ioctl.sh
+│   │   ├── test_filtering.sh
+│   │   └── test_sysfs.sh
+│   │
+│   └── performance/
+│       ├── packet_generator.c
+│       └── benchmark.c
+│
+├── yocto/
+│   ├── meta-packet-filter/
+│   │   ├── conf/
+│   │   └── recipes-kernel/
+│   │       └── packet-filter/
+│   │           ├── packet-filter.bb
+│   │           └── files/
+│   │
+│   └── README.md
+│
+├── docs/
+│   ├── architecture.md
+│   ├── packet-flow.md
+│   ├── kernel-driver.md
+│   ├── ioctl-api.md
+│   ├── userspace.md
+│   ├── device-tree.md
+│   ├── yocto-build.md
+│   ├── deployment.md
+│   ├── testing.md
+│   ├── performance.md
+│   └── debugging.md
+│
+├── configs/
+│   ├── kernel/
+│   │   └── packet_filter_defconfig
+│   └── rules/
+│       ├── blacklist.conf
+│       ├── whitelist.conf
+│       └── monitoring.conf
+│
+├── systemd/
+│   └── packet-filter.service
+│
+└── .github/
+    └── workflows/
+        ├── build.yml
+        └── static-analysis.yml

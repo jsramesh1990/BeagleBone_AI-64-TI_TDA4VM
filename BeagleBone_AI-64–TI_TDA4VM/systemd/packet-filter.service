@@ -1,0 +1,34 @@
+[Unit]
+Description=BeagleBone AI-64 Packet Filter Service
+Documentation=README.md
+After=network-online.target
+Wants=network-online.target
+
+# Make sure the kernel module is available before starting
+ConditionPathExists=/lib/modules/%v
+
+[Service]
+Type=oneshot
+
+# Load the packet filter kernel module
+ExecStart=/sbin/modprobe packet_filter
+
+# Keep the service logically active after ExecStart exits
+RemainAfterExit=yes
+
+# Remove the kernel module during shutdown
+ExecStop=/sbin/modprobe -r packet_filter
+
+# Give the driver enough time to clean up
+TimeoutStartSec=30
+TimeoutStopSec=30
+
+# Do not restart automatically because this is
+# a kernel-module initialization service
+Restart=no
+
+# Security settings
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=multi-user.target
