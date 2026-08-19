@@ -1,4 +1,3 @@
-
 # BeagleBone AI-64 – TI TDA4VM
 # Linux Kernel Packet Filtering System
 
