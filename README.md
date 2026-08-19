@@ -24,7 +24,6 @@ The following animation illustrates the complete BeagleBone AI-64 based on the T
        width="950">
 </p>
 
----
 
 # Table of Contents
 
